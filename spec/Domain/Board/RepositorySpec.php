@@ -11,9 +11,9 @@
 
 declare(strict_types = 1);
 
-namespace spec\Aggrego\BasicBlockExample\Domain\Board;
+namespace spec\Aggrego\FileDomainRepository\Domain\Board;
 
-use Aggrego\BasicBlockExample\Domain\Board\Repository;
+use Aggrego\FileDomainRepository\Domain\Board\Repository;
 use Aggrego\Domain\Board\Repository as DomainRepository;
 use PhpSpec\ObjectBehavior;
 

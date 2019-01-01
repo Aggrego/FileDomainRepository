@@ -11,7 +11,7 @@
 
 declare(strict_types = 1);
 
-namespace Aggrego\BasicBlockExample\Domain\Board;
+namespace Aggrego\FileDomainRepository\Domain\Board;
 
 use Aggrego\Domain\Board\Board;
 use Aggrego\Domain\Board\Exception\BoardExistException;
