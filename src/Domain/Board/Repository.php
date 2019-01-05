@@ -43,19 +43,19 @@ class Repository implements DomainRepository
      */
     public function getBoardByUuid(Uuid $uuid): Board
     {
-        $BoardUuidValue = $uuid->getValue();
-        if (isset($this->loaded[$BoardUuidValue])) {
-            return $this->loaded[$BoardUuidValue];
+        $boardUuidValue = $uuid->getValue();
+        if (isset($this->loaded[$boardUuidValue])) {
+            return $this->loaded[$boardUuidValue];
         }
 
         $filePath = $this->getSavingPath($uuid);
         if (!file_exists($filePath)) {
-            throw new BoardExistException(sprintf('Given "%s" don\'t exists in "%s"', $BoardUuidValue, $filePath));
+            throw new BoardExistException(sprintf('Given "%s" don\'t exists in "%s"', $boardUuidValue, $filePath));
         }
 
         $content = file_get_contents($filePath);
         $unserialize = unserialize($content);
-        $this->loaded[$BoardUuidValue] = $unserialize;
+        $this->loaded[$boardUuidValue] = $unserialize;
 
         return $unserialize;
     }
