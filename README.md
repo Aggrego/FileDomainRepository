@@ -6,6 +6,9 @@
 
 # FileDomainRepository
 
+Implementation of `Repository` to hold `Board`s in file. This don't require to be solid DB, as we want to have only temporary and quick storage.
+Read more at [Fowler article](https://martinfowler.com/articles/lmax.html).
+
 ## Versioning
  
 Staring version ``1.0.0``, will follow [Semantic Versioning v2.0.0](http://semver.org/spec/v2.0.0.html).

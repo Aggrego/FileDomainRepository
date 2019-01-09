@@ -1,12 +1,10 @@
 <?php
 /**
- *
  * This file is part of the Aggrego.
  * (c) Tomasz Kunicki <kunicki.tomasz@gmail.com>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
  */
 
 declare(strict_types = 1);
@@ -21,10 +19,14 @@ use Aggrego\Domain\Board\Uuid;
 
 class Repository implements DomainRepository
 {
-    /** @var string */
+    /**
+     * @var string
+     */
     private $dir;
 
-    /** @var array */
+    /**
+     * @var array
+     */
     private $loaded = [];
 
     public function __construct()
@@ -37,7 +39,7 @@ class Repository implements DomainRepository
     }
 
     /**
-     * @param Uuid $uuid
+     * @param  Uuid $uuid
      * @return Board
      * @throws BoardNotFoundException
      */
@@ -54,6 +56,12 @@ class Repository implements DomainRepository
         }
 
         $content = file_get_contents($filePath);
+        if (!$content) {
+            throw new BoardExistException(sprintf('Given "%s" don\'t have correct format in file.', $boardUuidValue));
+        }
+        /**
+ * @var string $content
+*/
         $unserialize = unserialize($content);
         $this->loaded[$boardUuidValue] = $unserialize;
 
@@ -61,7 +69,7 @@ class Repository implements DomainRepository
     }
 
     /**
-     * @param Board $board
+     * @param  Board $board
      * @throws BoardExistException
      */
     public function addBoard(Board $board): void
