@@ -60,8 +60,8 @@ class Repository implements DomainRepository
             throw new BoardExistException(sprintf('Given "%s" don\'t have correct format in file.', $boardUuidValue));
         }
         /**
- * @var string $content
-*/
+         * @var string $content
+         */
         $unserialize = unserialize($content);
         $this->loaded[$boardUuidValue] = $unserialize;
 
@@ -83,6 +83,13 @@ class Repository implements DomainRepository
         $this->saveFile($board);
     }
 
+    public function __destruct()
+    {
+        foreach ($this->loaded as $board) {
+            $this->saveFile($board);
+        }
+    }
+
     private function saveFile(Board $board): void
     {
         $filePath = $this->getSavingPath($board->getUuid());
@@ -92,12 +99,5 @@ class Repository implements DomainRepository
     private function getSavingPath(Uuid $uuid): string
     {
         return $filePath = $this->dir . $uuid->getValue() . '.data';
-    }
-
-    public function __destruct()
-    {
-        foreach ($this->loaded as $board) {
-            $this->saveFile($board);
-        }
     }
 }
