@@ -17,8 +17,7 @@
     "wikimedia/composer-merge-plugin": "1.4.*",
     "phpspec/phpspec": "^5.0",
     "squizlabs/php_codesniffer": "3.*",
-    "phpstan/phpstan": "^0.10",
-    "timitao/value-object": "dev-master"
+    "phpstan/phpstan": "^0.10"
   },
   "autoload": {
     "psr-4": {
