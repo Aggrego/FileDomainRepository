@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1743636011017dd3a19ea04a65fdbacc",
+    "content-hash": "e5475059bdb0b4275379ac2abbc6e7ef",
     "packages": [
         {
             "name": "aggrego/command-consumer",
-            "version": "v0.2.0-stable",
+            "version": "v0.2.1-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/CommandConsumer.git",
-                "reference": "087657540cf161022b5e7173fac1397b466b63f5"
+                "reference": "90362bbeb158dc0c00070a68c3b2c78dc89aef66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/CommandConsumer/zipball/087657540cf161022b5e7173fac1397b466b63f5",
-                "reference": "087657540cf161022b5e7173fac1397b466b63f5",
+                "url": "https://api.github.com/repos/Aggrego/CommandConsumer/zipball/90362bbeb158dc0c00070a68c3b2c78dc89aef66",
+                "reference": "90362bbeb158dc0c00070a68c3b2c78dc89aef66",
                 "shasum": ""
             },
             "require": {
                 "beberlei/assert": "^3.0",
                 "php": ">=7.1",
-                "timitao/value-object": "dev-master"
+                "timitao/value-object": "^0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^5.0",
@@ -46,20 +46,20 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2019-03-07T21:59:52+00:00"
+            "time": "2019-04-08T17:10:50+00:00"
         },
         {
             "name": "aggrego/domain",
-            "version": "v0.1.0",
+            "version": "v0.1.1-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/Domain.git",
-                "reference": "504ce9a406492b079e875d850fb25b666a6d4b6c"
+                "reference": "948eea30d65d988e137e0fe4b91e966dbac0e084"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/Domain/zipball/504ce9a406492b079e875d850fb25b666a6d4b6c",
-                "reference": "504ce9a406492b079e875d850fb25b666a6d4b6c",
+                "url": "https://api.github.com/repos/Aggrego/Domain/zipball/948eea30d65d988e137e0fe4b91e966dbac0e084",
+                "reference": "948eea30d65d988e137e0fe4b91e966dbac0e084",
                 "shasum": ""
             },
             "require": {
@@ -68,7 +68,7 @@
                 "beberlei/assert": "^3.0",
                 "php": ">=7.1",
                 "ramsey/uuid": "^3.8",
-                "timitao/value-object": "dev-master"
+                "timitao/value-object": "^0"
             },
             "require-dev": {
                 "behat/behat": "^3.4",
@@ -93,27 +93,27 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2019-03-14T21:05:43+00:00"
+            "time": "2019-04-08T17:26:22+00:00"
         },
         {
             "name": "aggrego/event-consumer",
-            "version": "v0.1.0-stable",
+            "version": "v0.1.1-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Aggrego/EventConsumer.git",
-                "reference": "6c53abffb546effe489aae8c7a8631a18d195d91"
+                "reference": "1e52b9dee296dc8e791f831b4d83ea9d5de25d73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Aggrego/EventConsumer/zipball/6c53abffb546effe489aae8c7a8631a18d195d91",
-                "reference": "6c53abffb546effe489aae8c7a8631a18d195d91",
+                "url": "https://api.github.com/repos/Aggrego/EventConsumer/zipball/1e52b9dee296dc8e791f831b4d83ea9d5de25d73",
+                "reference": "1e52b9dee296dc8e791f831b4d83ea9d5de25d73",
                 "shasum": ""
             },
             "require": {
                 "beberlei/assert": "^3.0",
                 "composer/semver": "1.4.*",
                 "php": ">=7.1",
-                "timitao/value-object": "dev-master"
+                "timitao/value-object": "^0"
             },
             "require-dev": {
                 "phpspec/phpspec": "^5.0",
@@ -136,7 +136,7 @@
                     "name": "Tomasz Kunicki"
                 }
             ],
-            "time": "2019-03-07T21:09:16+00:00"
+            "time": "2019-04-08T17:04:52+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -442,7 +442,7 @@
         },
         {
             "name": "timitao/value-object",
-            "version": "dev-master",
+            "version": "v0.1.0-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/timiTao/ValueObject.git",
@@ -2566,9 +2566,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "timitao/value-object": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
